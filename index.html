@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário Sensorial</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Página de boas-vindas e cadastro -->
+  <div id="inicio" class="section active">
+    <div class="logo-container">
+      <img src="img/logo-senai.png" alt="Instituto SENAI Alimentos e Bebidas" class="logo-senai">
+    </div>
+
+    <h1>Teste Sensorial - Instruções</h1>
+    <p>O presente estudo tem por objetivo avaliar amostras de caldo de 
+      carne quanto à percepção dos atributos doce, salgado, umami, ácido 
+      e amargo.</p> 
+    <p>Os dados coletados nesta pesquisa servem para subsidiar
+       a correlação de respostas instrumentais de sensorial eletrônica, 
+       projeto de inovação realizado como parceria entre IST Alimentos e 
+       Bebidas e ISI Sistemas Embarcados.</p> 
+    <p>Caso possua alguma restrição no uso dos seus dados, acione 
+       o responsável pela condução da avaliação. Se estiver de acordo, 
+       continue respondendo o formulário.</p>
+    <p>Preencha seus dados para iniciar:</p>
+
+    <div>
+      <input type="text" id="nome" placeholder="Nome completo" />
+    </div>
+    <div>
+      <input type="email" id="email" placeholder="E-mail" />
+    </div>
+    <div>
+      <button onclick="iniciarTeste()">Iniciar Avaliação</button>
+    </div>
+  </div>
+
+  <!-- Página de avaliação -->
+  <div id="avaliacao" class="section">
+    <h2 id="gostoAtual"></h2>
+
+    <div id="referencias">
+      <p><strong>Referências de Intensidade:</strong></p>
+      <p>Intensidade 0 → Produto de referência mínima</p>
+      <p>Intensidade 5 → Produto intermediário</p>
+      <p>Intensidade 10 → Produto de referência máxima</p>
+    </div>
+
+    <p>Digite o código da amostra:</p>
+    <input type="text" id="codigoAmostra" placeholder="Código da amostra (ex: 123)" />
+
+    <p>Intensidade percebida:</p>
+    <input type="range" min="0" max="10" step="0.01" id="slider" oninput="atualizarSlider()" />
+    <p>Valor: <span id="valorSlider">5.00</span></p>
+
+    <button onclick="proximaAmostra()">Próxima</button>
+  </div>
+
+  <!-- Tela de descanso -->
+  <div id="descanso" class="section">
+    <h2>Intervalo</h2>
+    <p>Beba água e limpe o paladar</p>
+    <div class="logo-container">
+      <img src="img/beba-agua.png" alt="Ícone para beber água" class="beba-agua">
+    </div>
+    <p>Continuando em <span id="timer">10</span> segundos...</p>
+  </div>
+
+  <!-- Página final -->
+  <div id="fim" class="section">
+    <h2>Obrigado!</h2>
+    <div class="logo-container">
+      <img src="img/festa.png" alt="Ícone de confirmação de envio" class="festa">
+    </div>
+    <p>Seus dados foram enviados com sucesso.</p>
+  </div>
+
+  <!-- Script principal (ajustado para Google Sheets no JS) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

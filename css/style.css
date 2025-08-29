@@ -1,0 +1,86 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-align: center;
+  margin: 40px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.logo-container {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--branco);
+  border-bottom: 2px solid var(--azul-claro);
+}
+
+.logo-senai {
+  height: 70px;
+  max-width: 90%;
+}
+
+.beba-agua {
+  height: 100px;
+  max-width: 90%;
+}
+
+.festa {
+  height: 120px;
+  max-width: 90%;
+}
+
+
+input[type="text"],
+input[type="email"] {
+  padding: 12px;
+  margin: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+input[type="range"] {
+  width: 80%;
+  margin: 20px 0;
+  accent-color: #005ca9;
+}
+
+button {
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #005ca9;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003e6b;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#referencias {
+  background-color: #eef3f7;
+  padding: 20px;
+  margin: 30px auto;
+  width: 80%;
+  border-radius: 8px;
+  text-align: left;
+  border-left: 5px solid #005ca9;
+}
