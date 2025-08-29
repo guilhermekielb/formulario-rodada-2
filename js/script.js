@@ -48,7 +48,7 @@ window.atualizarSlider = function () {
 
 // Carrega nova amostra
 function carregarAmostra() {
-  document.getElementById('gostoAtual').textContent = `Gosto: ${gostos[gostoIndex]} (${amostraIndex + 1}/3)`;
+  document.getElementById('gostoAtual').textContent = `Gosto: ${gostos[gostoIndex]} (${amostraIndex + 1}/5)`;
   document.getElementById('codigoAmostra').value = '';
   document.getElementById('slider').value = 5;
   window.atualizarSlider();
@@ -83,7 +83,7 @@ window.proximaAmostra = function () {
 
   amostraIndex++;
 
-  if (amostraIndex < 3) {
+  if (amostraIndex < 5) {
     carregarAmostra();
   } else if (gostoIndex < gostos.length - 1) {
     gostoIndex++;
@@ -137,6 +137,7 @@ function enviarDados() {
       alert("Erro ao enviar dados. Verifique sua conexão.");
     });
 }
+
 
 
 
